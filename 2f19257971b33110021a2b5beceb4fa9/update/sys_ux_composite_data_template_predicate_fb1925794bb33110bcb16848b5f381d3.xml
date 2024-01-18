@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_composite_data_template_predicate">
+    <sys_ux_composite_data_template_predicate action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_1298510_demo_a_0_document_approval">active=true^EQ<item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <custom_condition/>
+        <custom_field_list/>
+        <field_list>name,number,approval_category,description,status,submitter,work_notes,active</field_list>
+        <name>Document Approval Search Config</name>
+        <order>50</order>
+        <predicate_bundle display_value="Document Approval Search Bundle">f31925793bb331100d7a24c364a8c2d5</predicate_bundle>
+        <required_roles/>
+        <sys_class_name>sys_ux_composite_data_template_predicate</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:20:56</sys_created_on>
+        <sys_id>fb1925794bb33110bcb16848b5f381d3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Document Approval Search Config</sys_name>
+        <sys_package display_value="Demo App using template" source="x_1298510_demo_a_0">2f19257971b33110021a2b5beceb4fa9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_update_name>sys_ux_composite_data_template_predicate_fb1925794bb33110bcb16848b5f381d3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:20:56</sys_updated_on>
+        <table>x_1298510_demo_a_0_document_approval</table>
+        <ux_template display_value="doc-approval-search-result-template">7b19257987b331104c0fc12fd7f547d5</ux_template>
+    </sys_ux_composite_data_template_predicate>
+</record_update>

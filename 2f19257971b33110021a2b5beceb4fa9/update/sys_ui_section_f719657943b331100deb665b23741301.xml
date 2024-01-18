@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="f719657943b331100deb665b23741301" sys_domain="global" table="x_1298510_demo_a_0_document_approval" version="3" view="portal">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>name</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-01-18 12:20:57</sys_created_on>
+            <sys_id>731965797db331101802a096ffec7c01</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1298510_demo_a_0_document_approval" sys_domain="global" view="1c9434717d31311076daf29f52070d9f">f719657943b331100deb665b23741301</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-01-18 12:20:57</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>approval_category</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-01-18 12:20:57</sys_created_on>
+            <sys_id>fb196579abb33110d8e597d862e9e500</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1298510_demo_a_0_document_approval" sys_domain="global" view="1c9434717d31311076daf29f52070d9f">f719657943b331100deb665b23741301</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-01-18 12:20:57</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>description</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-01-18 12:20:57</sys_created_on>
+            <sys_id>7f1965796ab33110c86548801bd50a01</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1298510_demo_a_0_document_approval" sys_domain="global" view="1c9434717d31311076daf29f52070d9f">f719657943b331100deb665b23741301</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-01-18 12:20:57</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_1298510_demo_a_0_document_approval</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-01-18 12:20:57</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f719657943b331100deb665b23741301</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1298510_demo_a_0_document_approval</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Demo App using template" source="x_1298510_demo_a_0">2f19257971b33110021a2b5beceb4fa9</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+            <sys_update_name>sys_ui_section_f719657943b331100deb665b23741301</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-01-18 12:20:57</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Portal" name="portal">1c9434717d31311076daf29f52070d9f</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

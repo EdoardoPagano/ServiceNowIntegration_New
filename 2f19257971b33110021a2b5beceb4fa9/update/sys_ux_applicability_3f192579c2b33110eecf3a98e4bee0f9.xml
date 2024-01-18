@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_applicability">
+    <sys_ux_applicability action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <api_name>x_1298510_demo_a_0.Document Admin</api_name>
+        <description>Role for document approval admins</description>
+        <name>Document Admin</name>
+        <role_names/>
+        <roles name="x_1298510_demo_a_0.admin">1829657917b3311020a9fba13fad3ace</roles>
+        <sys_class_name>sys_ux_applicability</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:20:49</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3f192579c2b33110eecf3a98e4bee0f9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Document Admin</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Demo App using template" source="x_1298510_demo_a_0">2f19257971b33110021a2b5beceb4fa9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_update_name>sys_ux_applicability_3f192579c2b33110eecf3a98e4bee0f9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:20:49</sys_updated_on>
+    </sys_ux_applicability>
+</record_update>

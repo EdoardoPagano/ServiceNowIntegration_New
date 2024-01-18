@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_permission">
+    <par_dashboard_permission action="INSERT_OR_UPDATE">
+        <can_read>true</can_read>
+        <can_share>false</can_share>
+        <can_write>true</can_write>
+        <dashboard display_value="Document Approvals">c829657911b331104f2ebb6ea09d06b7</dashboard>
+        <group/>
+        <role display_value="x_1298510_demo_a_0.admin" name="x_1298510_demo_a_0.admin">1829657917b3311020a9fba13fad3ace</role>
+        <sys_class_name>par_dashboard_permission</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:20:55</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>48296579f0b331104628b926b1a879b6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>c829657911b331104f2ebb6ea09d06b7</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Demo App using template" source="x_1298510_demo_a_0">2f19257971b33110021a2b5beceb4fa9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_update_name>par_dashboard_permission_48296579f0b331104628b926b1a879b6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:20:55</sys_updated_on>
+        <user/>
+    </par_dashboard_permission>
+</record_update>

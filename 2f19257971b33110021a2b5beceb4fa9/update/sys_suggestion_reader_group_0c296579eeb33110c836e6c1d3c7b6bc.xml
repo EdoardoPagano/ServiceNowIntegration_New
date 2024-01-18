@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_suggestion_reader_group">
+    <sys_suggestion_reader_group action="INSERT_OR_UPDATE">
+        <click_in_mode>false</click_in_mode>
+        <context_config_id display_value="Document Approval Portal Search Configuration">c429657963b3311001c42f2b33bf203c</context_config_id>
+        <limit>5</limit>
+        <order>300</order>
+        <section_header/>
+        <suggestion_type>Suggested Query Reader Group for Document Approval Portal Search Configuration</suggestion_type>
+        <sys_class_name>sys_suggestion_reader_group</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:03</sys_created_on>
+        <sys_id>0c296579eeb33110c836e6c1d3c7b6bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Suggested Query Reader Group for Document Approval Portal Search Configuration</sys_name>
+        <sys_package display_value="Demo App using template" source="x_1298510_demo_a_0">2f19257971b33110021a2b5beceb4fa9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_update_name>sys_suggestion_reader_group_0c296579eeb33110c836e6c1d3c7b6bc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:03</sys_updated_on>
+    </sys_suggestion_reader_group>
+</record_update>

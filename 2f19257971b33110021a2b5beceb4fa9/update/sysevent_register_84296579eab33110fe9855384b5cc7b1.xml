@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_register">
+    <sysevent_register action="INSERT_OR_UPDATE">
+        <caller_access/>
+        <derived_priority/>
+        <description>Change in state of document approval table</description>
+        <event_name>x_1298510_demo_a_0.notification_event</event_name>
+        <fired_by>Single Stage Approval Workflow for Document Approval</fired_by>
+        <priority/>
+        <queue/>
+        <suffix>notification_event</suffix>
+        <sys_class_name>sysevent_register</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:20:59</sys_created_on>
+        <sys_id>84296579eab33110fe9855384b5cc7b1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1298510_demo_a_0.notification_event</sys_name>
+        <sys_package display_value="Demo App using template" source="x_1298510_demo_a_0">2f19257971b33110021a2b5beceb4fa9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_update_name>sysevent_register_84296579eab33110fe9855384b5cc7b1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:20:59</sys_updated_on>
+        <table/>
+    </sysevent_register>
+</record_update>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_page_property">
+    <sys_ux_page_property action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>Ribbon Config ID</description>
+        <name>ribbonConfigId</name>
+        <page display_value="Demo App using template Workspace">5c29657996b3311082b9aa391ef9a2cd</page>
+        <required_translations>[]</required_translations>
+        <route/>
+        <suffix/>
+        <sys_class_name>sys_ux_page_property</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:20:54</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>global</sys_domain_path>
+        <sys_id>731925797bb331105c214b8194ba5fc8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ribbonConfigId</sys_name>
+        <sys_package display_value="Demo App using template" source="x_1298510_demo_a_0">2f19257971b33110021a2b5beceb4fa9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_update_name>sys_ux_page_property_731925797bb331105c214b8194ba5fc8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:20:54</sys_updated_on>
+        <type>string</type>
+        <unique_name>x_1298510_demo_a_0.5c29657996b3311082b9aa391ef9a2cd.root.ribbonConfigId</unique_name>
+        <value>771925792eb33110589a3426854cabc7</value>
+    </sys_ux_page_property>
+    <sys_translated_text action="delete_multiple" query="documentkey=731925797bb331105c214b8194ba5fc8"/>
+</record_update>

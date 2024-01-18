@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_theme_asset">
+    <sys_ux_theme_asset action="INSERT_OR_UPDATE">
+        <category>image</category>
+        <name>header_logo</name>
+        <sys_class_name>sys_ux_theme_asset</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:04</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>bf1925794cb33110d0aeb4df7106c2c1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>header_logo</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Demo App using template" source="x_1298510_demo_a_0">2f19257971b33110021a2b5beceb4fa9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_update_name>sys_ux_theme_asset_bf1925794cb33110d0aeb4df7106c2c1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:04</sys_updated_on>
+    </sys_ux_theme_asset>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color/>
+        <chunk_size_bytes>700000</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/svg+xml</content_type>
+        <file_name>now-logo-white.svg</file_name>
+        <hash>4154310b4c5bdb83623233669adb4537c8f9b2ff596125edb195256baec5c6c8</hash>
+        <image_height/>
+        <image_width/>
+        <size_bytes>4351</size_bytes>
+        <size_compressed>1319</size_compressed>
+        <state>pending</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:04</sys_created_on>
+        <sys_id>b7192579ceb33110ecc46a5f9200a4c0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:04</sys_updated_on>
+        <table_name>sys_ux_theme_asset</table_name>
+        <table_sys_id>bf1925794cb33110d0aeb4df7106c2c1</table_sys_id>
+    </sys_attachment>
+</record_update>

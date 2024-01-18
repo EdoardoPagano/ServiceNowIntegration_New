@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_applet_launcher_tab">
+    <sys_sg_applet_launcher_tab action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applet_launcher display_value="Demo App using template">0c296579b5b33110bf8f3495a342ef20</applet_launcher>
+        <icon display_value="Document Approvals">c029657990b33110eafad5acd0f7be20</icon>
+        <label>Dcoument Approval</label>
+        <sys_class_name>sys_sg_applet_launcher_tab</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:20:59</sys_created_on>
+        <sys_id>48296579d0b331109641c86bc6400320</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Dcoument Approval</sys_name>
+        <sys_package display_value="Demo App using template" source="x_1298510_demo_a_0">2f19257971b33110021a2b5beceb4fa9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_update_name>sys_sg_applet_launcher_tab_48296579d0b331109641c86bc6400320</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:20:59</sys_updated_on>
+    </sys_sg_applet_launcher_tab>
+</record_update>

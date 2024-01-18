@@ -1,0 +1,3102 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation>Single Stage Approval</annotation>
+        <attributes>browserActivatedIn=firefox,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=86988463000,viewActivatedIn=naturalLanguage</attributes>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>This is a demo flow for document approval app consisting of a single stage approval.</description>
+        <internal_name>x_1298510_demo_a_0_single_stage_approval</internal_name>
+        <label_cache>[{"name":"1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.company.name","label":"1 - Look Up Record➛Document Approval Record➛Submitter➛Company➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"core_company","column_name":"name"},{"name":"1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.manager.email","label":"1 - Look Up Record➛Document Approval Record➛Submitter➛Manager➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"1bccda56-a014-4626-a57f-eb51cec42306.Record.name","label":"1 - Look Up Record➛Document Approval Record➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sn_doc_approval_document_approval","column_name":"name"},{"name":"1bccda56-a014-4626-a57f-eb51cec42306.Record.status","label":"1 - Look Up Record➛Document Approval Record➛Status","reference":"","reference_display":"Status","type":"choice","base_type":"choice","parent_table_name":"sn_doc_approval_document_approval","column_name":"status","choices":[{"label":"-- None --","image":"","reference":false,"rawLabel":"-- None --","selected":false,"missing":false,"used":false,"value":""},{"image":"","reference":false,"rawLabel":"Submitted","selected":false,"label":"Submitted","missing":false,"used":false,"value":"submitted","parameters":{"name":"sn_doc_approval_document_approval"}},{"image":"","reference":false,"rawLabel":"Returned","selected":false,"label":"Returned","missing":false,"used":false,"value":"returned","parameters":{"name":"sn_doc_approval_document_approval"}},{"image":"","reference":false,"rawLabel":"Approved","selected":false,"label":"Approved","missing":false,"used":false,"value":"approved","parameters":{"name":"sn_doc_approval_document_approval"}},{"image":"","reference":false,"rawLabel":"Rejected","selected":false,"label":"Rejected","missing":false,"used":false,"value":"rejected","parameters":{"name":"sn_doc_approval_document_approval"}}]},{"name":"subflow.document_id","label":"Input➛Document Id","type":"string","base_type":"string","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"d6126c60-e5a3-48c1-a151-305327285308"}},{"name":"1bccda56-a014-4626-a57f-eb51cec42306.Record","label":"1 - Look Up Record➛Document Approval Record","reference":"sn_doc_approval_document_approval","reference_display":"Document Approval","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"1bccda56-a014-4626-a57f-eb51cec42306.Record.sys_id","label":"1 - Look Up Record➛Document Approval Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_doc_approval_document_approval","column_name":"sys_id"},{"name":"1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.manager","label":"1 - Look Up Record➛Document Approval Record➛Submitter➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager"},{"name":"1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.name","label":"1 - Look Up Record➛Document Approval Record➛Submitter➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name"},{"name":"1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.email","label":"1 - Look Up Record➛Document Approval Record➛Submitter➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"8c318f1d-b260-48a9-89a8-fa06592d6975.record.approver.name","label":"2 - Create or Update Record➛Document Approver Record➛Approver➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name"},{"name":"8c318f1d-b260-48a9-89a8-fa06592d6975.record.sys_id","label":"2 - Create or Update Record➛Document Approver Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_doc_approval_document_approver","column_name":"sys_id"},{"name":"8c318f1d-b260-48a9-89a8-fa06592d6975.record","label":"2 - Create or Update Record➛Document Approver Record","reference":"sn_doc_approval_document_approver","reference_display":"Document Approver","type":"reference","base_type":"reference","attributes":{"uiType":"document_id","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"8c318f1d-b260-48a9-89a8-fa06592d6975.record.state","label":"2 - Create or Update Record➛Document Approver Record➛State","reference":"","reference_display":"State","type":"choice","base_type":"choice","parent_table_name":"sn_doc_approval_document_approver","column_name":"state","choices":[{"label":"-- None --","image":"","reference":false,"rawLabel":"-- None --","selected":false,"missing":false,"used":false,"value":""},{"image":"","reference":false,"rawLabel":"Submitted","selected":false,"label":"Submitted","missing":false,"used":false,"value":"submitted","parameters":{"name":"sn_doc_approval_document_approver"}},{"image":"","reference":false,"rawLabel":"Returned","selected":false,"label":"Returned","missing":false,"used":false,"value":"returned","parameters":{"name":"sn_doc_approval_document_approver"}},{"image":"","reference":false,"rawLabel":"Approved","selected":false,"label":"Approved","missing":false,"used":false,"value":"approved","parameters":{"name":"sn_doc_approval_document_approver"}},{"image":"","reference":false,"rawLabel":"No Longer Required","selected":false,"label":"No Longer Required","missing":false,"used":false,"value":"not_required","parameters":{"name":"sn_doc_approval_document_approver"}},{"image":"","reference":false,"rawLabel":"Rejected","selected":false,"label":"Rejected","missing":false,"used":false,"value":"rejected","parameters":{"name":"sn_doc_approval_document_approver"}}]}]</label_cache>
+        <master_snapshot>4c29657968b33110a10a7deee5b7a36a</master_snapshot>
+        <name>Single Stage Approval</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>!!!ux_url_prefix!!!</remote_trigger_id>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0029657963b331103ce103213b96c46b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Single Stage Approval</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Demo App using template" source="x_1298510_demo_a_0">2f19257971b33110021a2b5beceb4fa9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_update_name>sys_hub_flow_0029657963b331103ce103213b96c46b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=0029657963b331103ce103213b96c46b"/>
+    <sys_variable_value action="delete_multiple" query="document_key=0029657963b331103ce103213b96c46b"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=0029657963b331103ce103213b96c46b"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=0029657963b331103ce103213b96c46b"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=0029657963b331103ce103213b96c46b^sys_idNOT IN0429657957b33110f7be26a56356546a"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>0029657963b331103ce103213b96c46b</id>
+        <name>Single Stage Approval</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>0429657957b33110f7be26a56356546a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=0429657957b33110f7be26a56356546a"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=0029657963b331103ce103213b96c46b^sys_idNOT IN8c296579a5b331100dc4fe1a6851ad69"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=d6126c60-e5a3-48c1-a151-305327285308</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>document_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Document Id</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Single Stage Approval">0029657963b331103ce103213b96c46b</model>
+        <model_id>0029657963b331103ce103213b96c46b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_0029657963b331103ce103213b96c46b</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>8c296579a5b331100dc4fe1a6851ad69</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Demo App using template" source="x_1298510_demo_a_0">2f19257971b33110021a2b5beceb4fa9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=8c296579a5b331100dc4fe1a6851ad69"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=0029657963b331103ce103213b96c46b"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=0029657963b331103ce103213b96c46b"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=0029657963b331103ce103213b96c46b^sys_idNOT IN002965792db33110faf02d0f4ec6b668,042965799ab331106696f20a530de064,082965794ab33110b2fe8b7273a31b63,3b19257937b33110398625885ba0bead,8429657967b33110267ff3bd8d350062,84296579f7b331101283e0b02e48d565,88296579cfb331100afdb3a7ae923661,c02965794fb331107ae0a722da80f668,c029657993b33110d344be8333644f5c,c429657936b33110e44430d438b2b16a"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Event">40296579ccb3311007d6d9ae95d8d18e</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">0029657963b331103ce103213b96c46b</flow>
+        <order>10</order>
+        <parent_ui_id>c8ebe44c-3487-4d00-9067-3ff0859af400</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>002965792db33110faf02d0f4ec6b668</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <ui_id>ced8cff1-e8ac-493c-bcc1-3a2cc25c0a0e</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=002965792db33110faf02d0f4ec6b668"/>
+    <sys_element_mapping action="delete_multiple" query="id=002965792db33110faf02d0f4ec6b668"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approver</field>
+        <id>002965792db33110faf02d0f4ec6b668</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>482965799ab331108676b68140e23868</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.approver.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approver_id</field>
+        <id>002965792db33110faf02d0f4ec6b668</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>882965791db331102cb40548ae00e667</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>company</field>
+        <id>002965792db33110faf02d0f4ec6b668</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>c4296579c1b33110756f94f7e18a2467</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.company.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>document_name</field>
+        <id>002965792db33110faf02d0f4ec6b668</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>802965794eb331100cb74d7347ce9d69</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>document_owner</field>
+        <id>002965792db33110faf02d0f4ec6b668</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>4429657906b331101159d75f28fdfd69</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>email_id</field>
+        <id>002965792db33110faf02d0f4ec6b668</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>cc29657985b33110561e4ae8fe307068</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.email}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>status</field>
+        <id>002965792db33110faf02d0f4ec6b668</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>4c296579d7b3311037438e3e6619e864</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.state}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>sysid</field>
+        <id>002965792db33110faf02d0f4ec6b668</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>00296579f2b33110567c5e1361768a65</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=002965792db33110faf02d0f4ec6b668^sys_idNOT IN0c296579e7b331101b691a93ef872a65,48296579acb33110f6fe8f7f60f7d765,c0296579d4b33110faebdb570ead4b65"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>email_id</input_name>
+        <instance>002965792db33110faf02d0f4ec6b668</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"email_id":{"scriptActive":false}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>0c296579e7b331101b691a93ef872a65</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>message</input_name>
+        <instance>002965792db33110faf02d0f4ec6b668</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"message":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\nreturn \u0027Your document has been returned\u0027;"}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>48296579acb33110f6fe8f7f60f7d765</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>reason</input_name>
+        <instance>002965792db33110faf02d0f4ec6b668</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"reason":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn fd_data._2__create_record.record.comments.getJournalEntry(-1);"}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>c0296579d4b33110faebdb570ead4b65</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=002965792db33110faf02d0f4ec6b668"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">0029657963b331103ce103213b96c46b</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>042965799ab331106696f20a530de064</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <ui_id>1bccda56-a014-4626-a57f-eb51cec42306</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=042965799ab331106696f20a530de064"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>042965799ab331106696f20a530de064</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>4429657989b3311039bbf5771d713363</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <value>x_1298510_demo_a_0_document_approval</value>
+        <variable display_value="Table">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=042965799ab331106696f20a530de064"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>042965799ab331106696f20a530de064</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>4029657926b3311020afd42f139f8d64</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value>sys_id={{subflow.document_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=042965799ab331106696f20a530de064"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=042965799ab331106696f20a530de064"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Event">40296579ccb3311007d6d9ae95d8d18e</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">0029657963b331103ce103213b96c46b</flow>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>082965794ab33110b2fe8b7273a31b63</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <ui_id>a99d4700-da0c-4f8c-bce4-a29fc3b64677</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=082965794ab33110b2fe8b7273a31b63"/>
+    <sys_element_mapping action="delete_multiple" query="id=082965794ab33110b2fe8b7273a31b63"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approver</field>
+        <id>082965794ab33110b2fe8b7273a31b63</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>cc29657934b33110ac992dcb535b0562</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.approver.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approver_id</field>
+        <id>082965794ab33110b2fe8b7273a31b63</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>c4296579d4b331109c6b0a4b31768a64</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>company</field>
+        <id>082965794ab33110b2fe8b7273a31b63</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>882965796cb33110c6dbd2e94082a764</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.company.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>document_name</field>
+        <id>082965794ab33110b2fe8b7273a31b63</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>8c29657989b331100c0e078550be2e63</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>document_owner</field>
+        <id>082965794ab33110b2fe8b7273a31b63</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>44296579adb3311015b69cec26708160</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>email_id</field>
+        <id>082965794ab33110b2fe8b7273a31b63</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>0829657946b33110e4985be8f3aa8560</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.manager.email}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>status</field>
+        <id>082965794ab33110b2fe8b7273a31b63</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>4c29657975b33110d949a6ac5a785761</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.status}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>sysid</field>
+        <id>082965794ab33110b2fe8b7273a31b63</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>0029657917b331104e368632d6131062</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=082965794ab33110b2fe8b7273a31b63^sys_idNOT IN4029657901b3311060713d4d9e32f061,48296579c6b33110f98d65b4245c3762,c429657994b331105a3680bf15d5a461,c8296579afb33110053517c6f8b40e60"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>document_name</input_name>
+        <instance>082965794ab33110b2fe8b7273a31b63</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"document_name":{"scriptActive":false}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>4029657901b3311060713d4d9e32f061</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>email_id</input_name>
+        <instance>082965794ab33110b2fe8b7273a31b63</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"email_id":{"scriptActive":false}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>48296579c6b33110f98d65b4245c3762</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>message</input_name>
+        <instance>082965794ab33110b2fe8b7273a31b63</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"message":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn \u0027You have a document to review\u0027;"}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>c429657994b331105a3680bf15d5a461</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>document_owner</input_name>
+        <instance>082965794ab33110b2fe8b7273a31b63</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"document_owner":{"scriptActive":false}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>c8296579afb33110053517c6f8b40e60</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=082965794ab33110b2fe8b7273a31b63"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create or Update Record">ab575ae253b3230034c6ddeeff7b12f1</action_type>
+        <action_type_parent display_value="Create or Update Record">e057d2e253b3230034c6ddeeff7b1261</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">0029657963b331103ce103213b96c46b</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>3b19257937b33110398625885ba0bead</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <ui_id>8c318f1d-b260-48a9-89a8-fa06592d6975</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=3b19257937b33110398625885ba0bead"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>3b19257937b33110398625885ba0bead</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>fb192579f6b3311034f4c18bb0d5e2ad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <value>x_1298510_demo_a_0_document_approver</value>
+        <variable display_value="Table Name">27575ae253b3230034c6ddeeff7b12f4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=3b19257937b33110398625885ba0bead"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>fields</field>
+        <id>3b19257937b33110398625885ba0bead</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>b3192579feb33110865394a9615d40ad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_ab575ae253b3230034c6ddeeff7b12f1</table>
+        <value>document={{1bccda56-a014-4626-a57f-eb51cec42306.Record.sys_id}}^approver={{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.manager}}^state=submitted^coalesce_fields=document</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=3b19257937b33110398625885ba0bead"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=3b19257937b33110398625885ba0bead"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Event">40296579ccb3311007d6d9ae95d8d18e</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">0029657963b331103ce103213b96c46b</flow>
+        <order>6</order>
+        <parent_ui_id>979a1b99-9196-4461-bf71-b0c57881ba29</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>8429657967b33110267ff3bd8d350062</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <ui_id>3d5b9d74-5170-4a8b-8888-764b03ee96eb</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=8429657967b33110267ff3bd8d350062"/>
+    <sys_element_mapping action="delete_multiple" query="id=8429657967b33110267ff3bd8d350062"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approver</field>
+        <id>8429657967b33110267ff3bd8d350062</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>0429657944b3311007810c5709d5e45e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.approver.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approver_id</field>
+        <id>8429657967b33110267ff3bd8d350062</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>402965795db331103322a200456e045e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>company</field>
+        <id>8429657967b33110267ff3bd8d350062</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>8c29657927b331105d456b5644fe065d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.company.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>document_name</field>
+        <id>8429657967b33110267ff3bd8d350062</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>cc29657959b33110a1053017aaba155f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>document_owner</field>
+        <id>8429657967b33110267ff3bd8d350062</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>80296579a8b33110d4c35792d8cf9060</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>email_id</field>
+        <id>8429657967b33110267ff3bd8d350062</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>0029657903b33110b230d531da45775f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.email}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>status</field>
+        <id>8429657967b33110267ff3bd8d350062</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>c0296579d0b33110a7bf5f2f94da675f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.state}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>sysid</field>
+        <id>8429657967b33110267ff3bd8d350062</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>4c29657989b3311007b2d36bafb09d5e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=8429657967b33110267ff3bd8d350062^sys_idNOT IN0c296579ebb331102f2e1c0b7b313c5f,482965798db331107f08480a96a0865f,84296579b9b33110dadf2282b0acef5f,882965792db33110d505a76e7c7d825e,c429657928b331109ead18066ed1925e,c829657946b33110ed75edbaae9dd35d"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>reason_for_return</input_name>
+        <instance>8429657967b33110267ff3bd8d350062</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"reason_for_return":{"scriptActive":false,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\n"}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>0c296579ebb331102f2e1c0b7b313c5f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>reason</input_name>
+        <instance>8429657967b33110267ff3bd8d350062</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"reason":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn fd_data._2__create_record.record.comments.getJournalEntry(-1);"}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>482965798db331107f08480a96a0865f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>status</input_name>
+        <instance>8429657967b33110267ff3bd8d350062</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"status":{"scriptActive":false}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>84296579b9b33110dadf2282b0acef5f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>email_id</input_name>
+        <instance>8429657967b33110267ff3bd8d350062</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"email_id":{"scriptActive":false}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>882965792db33110d505a76e7c7d825e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>company</input_name>
+        <instance>8429657967b33110267ff3bd8d350062</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"company":{"scriptActive":false}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>c429657928b331109ead18066ed1925e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>message</input_name>
+        <instance>8429657967b33110267ff3bd8d350062</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"message":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn \u0027Your document has been approved\u0027;"}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>c829657946b33110ed75edbaae9dd35d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=8429657967b33110267ff3bd8d350062"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Event">40296579ccb3311007d6d9ae95d8d18e</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">0029657963b331103ce103213b96c46b</flow>
+        <order>14</order>
+        <parent_ui_id>d762098d-f596-47bf-9c52-e515e42ac0f9</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>84296579f7b331101283e0b02e48d565</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <ui_id>a51433bb-c88e-40db-a399-609d25fb9332</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=84296579f7b331101283e0b02e48d565"/>
+    <sys_element_mapping action="delete_multiple" query="id=84296579f7b331101283e0b02e48d565"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approver</field>
+        <id>84296579f7b331101283e0b02e48d565</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>042965799eb33110e43b05234013c567</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.approver.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approver_id</field>
+        <id>84296579f7b331101283e0b02e48d565</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>4029657925b3311062d689ac6e641a67</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>company</field>
+        <id>84296579f7b331101283e0b02e48d565</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>0829657962b331101d8cd28104156266</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.company.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>document_name</field>
+        <id>84296579f7b331101283e0b02e48d565</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>8c29657953b331104c96759da7d00b66</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>document_owner</field>
+        <id>84296579f7b331101283e0b02e48d565</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>c8296579d3b33110ee1594765293a566</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>email_id</field>
+        <id>84296579f7b331101283e0b02e48d565</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>80296579a8b3311066059ddb65ae7b66</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.email}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>status</field>
+        <id>84296579f7b331101283e0b02e48d565</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>cc2965794fb331103eeb2b02b442e865</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.state}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>sysid</field>
+        <id>84296579f7b331101283e0b02e48d565</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>4429657989b33110d73954e55987bc66</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=84296579f7b331101283e0b02e48d565^sys_idNOT IN8029657924b331105960e0f1b69d2763,c829657996b33110aa0f59fa5151f363"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>reason</input_name>
+        <instance>84296579f7b331101283e0b02e48d565</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"reason":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn fd_data._2__create_record.record.comments.getJournalEntry(-1);"}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>8029657924b331105960e0f1b69d2763</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>message</input_name>
+        <instance>84296579f7b331101283e0b02e48d565</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"message":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn \u0027Your document has been rejected\u0027;"}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>c829657996b33110aa0f59fa5151f363</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=84296579f7b331101283e0b02e48d565"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">0029657963b331103ce103213b96c46b</flow>
+        <order>11</order>
+        <parent_ui_id>c8ebe44c-3487-4d00-9067-3ff0859af400</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>88296579cfb331100afdb3a7ae923661</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <ui_id>b0b653c2-0eff-43b2-bd40-2b43f54da2c7</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=88296579cfb331100afdb3a7ae923661"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>88296579cfb331100afdb3a7ae923661</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>04296579afb331107cb2ff1f49430661</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <value>status=returned^work_notes=fd-scripted</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>88296579cfb331100afdb3a7ae923661</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>8c2965792eb331106cf4a3de81de3760</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <value>x_1298510_demo_a_0_document_approval</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=88296579cfb331100afdb3a7ae923661"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>88296579cfb331100afdb3a7ae923661</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>c02965799db331100a3c196bcf6f7b62</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=88296579cfb331100afdb3a7ae923661^sys_idNOT INff192579c7b331109a7da8c1512902ac"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>values</input_name>
+        <instance>88296579cfb331100afdb3a7ae923661</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"work_notes":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value. \n**Order number is offset by +1 in Error Handling Section.\n**Available options display upon pressing \".\" after fd_data\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn fd_data._2__create_or_update_record.record.comments;","savedValue":""}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>ff192579c7b331109a7da8c1512902ac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=88296579cfb331100afdb3a7ae923661"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Wait For Condition">89ce8a4187120010663ca1bb36cb0be3</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">0029657963b331103ce103213b96c46b</flow>
+        <order>4</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>c02965794fb331107ae0a722da80f668</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <ui_id>e0d3190d-f39b-4450-ac07-599a9b344b4f</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=c02965794fb331107ae0a722da80f668"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c02965794fb331107ae0a722da80f668</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>0c296579f3b33110d7bfb70cd830d768</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <value>state!=submitted</value>
+        <variable display_value="Conditions">49ce8a4187120010663ca1bb36cb0bef</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c02965794fb331107ae0a722da80f668</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>4c2965790ab331102fca7b4718895267</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <value>x_1298510_demo_a_0_document_approver</value>
+        <variable display_value="Table">45ce8a4187120010663ca1bb36cb0bea</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=c02965794fb331107ae0a722da80f668"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>c02965794fb331107ae0a722da80f668</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>8429657981b331108e12d89e6eef8168</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_89ce8a4187120010663ca1bb36cb0be3</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=c02965794fb331107ae0a722da80f668"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=c02965794fb331107ae0a722da80f668"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">0029657963b331103ce103213b96c46b</flow>
+        <order>15</order>
+        <parent_ui_id>d762098d-f596-47bf-9c52-e515e42ac0f9</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>c029657993b33110d344be8333644f5c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <ui_id>0922a0db-ef1d-4937-b567-1bccf564b2ac</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=c029657993b33110d344be8333644f5c"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c029657993b33110d344be8333644f5c</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>0c296579c6b33110100dbba4fd51fb5c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <value>status=rejected^work_notes=fd-scripted</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c029657993b33110d344be8333644f5c</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>882965796db331102adaae0b7693cc5b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <value>x_1298510_demo_a_0_document_approval</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=c029657993b33110d344be8333644f5c"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>c029657993b33110d344be8333644f5c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>442965799bb331109b00482f49c3975d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=c029657993b33110d344be8333644f5c^sys_idNOT IN7b19257996b33110bd7dcba117b7c5ac"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>values</input_name>
+        <instance>c029657993b33110d344be8333644f5c</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"work_notes":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value. \n**Order number is offset by +1 in Error Handling Section.\n**Available options display upon pressing \".\" after fd_data\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn fd_data._2__create_or_update_record.record.comments;","savedValue":""}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>7b19257996b33110bd7dcba117b7c5ac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=c029657993b33110d344be8333644f5c"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">0029657963b331103ce103213b96c46b</flow>
+        <order>7</order>
+        <parent_ui_id>979a1b99-9196-4461-bf71-b0c57881ba29</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>c429657936b33110e44430d438b2b16a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <ui_id>6540a418-193f-4bc9-a76e-070450969598</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=c429657936b33110e44430d438b2b16a"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c429657936b33110e44430d438b2b16a</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>0829657927b33110048f312196d28b69</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <value>status=approved^work_notes=fd-scripted</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c429657936b33110e44430d438b2b16a</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>c829657941b33110a199f85868673369</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <value>x_1298510_demo_a_0_document_approval</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=c429657936b33110e44430d438b2b16a"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>c429657936b33110e44430d438b2b16a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>4029657957b3311047213bfc8eaf466a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=c429657936b33110e44430d438b2b16a^sys_idNOT IN7719257925b33110627726fe34960fad"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>values</input_name>
+        <instance>c429657936b33110e44430d438b2b16a</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"work_notes":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value. \n**Order number is offset by +1 in Error Handling Section.\n**Available options display upon pressing \".\" after fd_data\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn fd_data._2__create_or_update_record.record.comments;","savedValue":""}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>7719257925b33110627726fe34960fad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=c429657936b33110e44430d438b2b16a"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=0029657963b331103ce103213b96c46b"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=0029657963b331103ce103213b96c46b^sys_idNOT IN002965791ab33110c33c3cf41418a05c,0429657985b33110f98e51b4f4f00058,082965790fb33110fe0900b9b89bff5a,842965799ab33110d575aff6f5853159,8c2965795ab33110ded82ef82c1eaa5a,c82965797fb3311065cdcdb76a1f855a"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">3f19257951b33110d93cda3350fc2fac</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Single Stage Approval">0029657963b331103ce103213b96c46b</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>002965791ab33110c33c3cf41418a05c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <ui_id>979a1b99-9196-4461-bf71-b0c57881ba29</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=002965791ab33110c33c3cf41418a05c"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>002965791ab33110c33c3cf41418a05c</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>802965791bb33110e8f8c0ba7311f75d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <value>Approved</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=002965791ab33110c33c3cf41418a05c"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>002965791ab33110c33c3cf41418a05c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>cc296579e5b331102dfb44b4dc6de85c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.state}}=approved</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=002965791ab33110c33c3cf41418a05c"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=002965791ab33110c33c3cf41418a05c"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">bb192579afb33110b87637a6f7e864ab</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Single Stage Approval">0029657963b331103ce103213b96c46b</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>12</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>c8ebe44c-3487-4d00-9067-3ff0859af400</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>0429657985b33110f98e51b4f4f00058</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <ui_id>3d266c9b-fd12-4b9e-af17-c24120616c5f</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=0429657985b33110f98e51b4f4f00058"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=0429657985b33110f98e51b4f4f00058"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=0429657985b33110f98e51b4f4f00058"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">33192579feb33110f1b6b12f092f87ac</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Single Stage Approval">0029657963b331103ce103213b96c46b</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>8</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>979a1b99-9196-4461-bf71-b0c57881ba29</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>082965790fb33110fe0900b9b89bff5a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <ui_id>423ea012-c51a-42bb-b340-023487961b5d</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=082965790fb33110fe0900b9b89bff5a"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=082965790fb33110fe0900b9b89bff5a"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=082965790fb33110fe0900b9b89bff5a"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">7f192579cfb331106ca8810276d5b9ab</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Single Stage Approval">0029657963b331103ce103213b96c46b</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>9</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>842965799ab33110d575aff6f5853159</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <ui_id>c8ebe44c-3487-4d00-9067-3ff0859af400</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=842965799ab33110d575aff6f5853159"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>842965799ab33110d575aff6f5853159</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>04296579bfb3311036d42797c30d7d5b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <value>Returned</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=842965799ab33110d575aff6f5853159"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>842965799ab33110d575aff6f5853159</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>44296579f8b33110ac9d1907adfc755a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.state}}=returned</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=842965799ab33110d575aff6f5853159"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=842965799ab33110d575aff6f5853159"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">f31925794cb33110a0dee5d1cfa1b7ac</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Single Stage Approval">0029657963b331103ce103213b96c46b</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>13</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>8c2965795ab33110ded82ef82c1eaa5a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <ui_id>d762098d-f596-47bf-9c52-e515e42ac0f9</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=8c2965795ab33110ded82ef82c1eaa5a"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>8c2965795ab33110ded82ef82c1eaa5a</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>8029657961b3311095e95d17b87cfc5a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <value>Rejected</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=8c2965795ab33110ded82ef82c1eaa5a"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>8c2965795ab33110ded82ef82c1eaa5a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>40296579dfb33110a8972520cd4e075b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.state}}=rejected</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=8c2965795ab33110ded82ef82c1eaa5a"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=8c2965795ab33110ded82ef82c1eaa5a"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">b719257963b33110f5346cde2fed0fac</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Single Stage Approval">0029657963b331103ce103213b96c46b</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>16</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>d762098d-f596-47bf-9c52-e515e42ac0f9</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>c82965797fb3311065cdcdb76a1f855a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <ui_id>d683e08e-e237-4968-9076-bdac84bfc528</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=c82965797fb3311065cdcdb76a1f855a"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=c82965797fb3311065cdcdb76a1f855a"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=c82965797fb3311065cdcdb76a1f855a"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=0029657963b331103ce103213b96c46b"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=0029657963b331103ce103213b96c46b"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_0029657963b331103ce103213b96c46b^sys_idNOT IN4c296579adb3311011575d5dd8df5158"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>document_id</element>
+        <help/>
+        <hint/>
+        <label>Document Id</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_0029657963b331103ce103213b96c46b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:00</sys_created_on>
+        <sys_id>4c296579adb3311011575d5dd8df5158</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Document Id</sys_name>
+        <sys_package display_value="Demo App using template" source="x_1298510_demo_a_0">2f19257971b33110021a2b5beceb4fa9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_0029657963b331103ce103213b96c46b_document_id_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:00</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_0029657963b331103ce103213b96c46b"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_0029657963b331103ce103213b96c46b"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_0029657963b331103ce103213b96c46b"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation>Single Stage Approval</annotation>
+        <attributes/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>This is a demo flow for document approval app consisting of a single stage approval.</description>
+        <internal_name>x_1298510_demo_a_0_single_stage_approval</internal_name>
+        <label_cache>[{"name":"1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.company.name","label":"1 - Look Up Record➛Document Approval Record➛Submitter➛Company➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"core_company","column_name":"name"},{"name":"1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.manager.email","label":"1 - Look Up Record➛Document Approval Record➛Submitter➛Manager➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"1bccda56-a014-4626-a57f-eb51cec42306.Record.name","label":"1 - Look Up Record➛Document Approval Record➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sn_doc_approval_document_approval","column_name":"name"},{"name":"1bccda56-a014-4626-a57f-eb51cec42306.Record.status","label":"1 - Look Up Record➛Document Approval Record➛Status","reference":"","reference_display":"Status","type":"choice","base_type":"choice","parent_table_name":"sn_doc_approval_document_approval","column_name":"status","choices":[{"label":"-- None --","image":"","reference":false,"rawLabel":"-- None --","selected":false,"missing":false,"used":false,"value":""},{"image":"","reference":false,"rawLabel":"Submitted","selected":false,"label":"Submitted","missing":false,"used":false,"value":"submitted","parameters":{"name":"sn_doc_approval_document_approval"}},{"image":"","reference":false,"rawLabel":"Returned","selected":false,"label":"Returned","missing":false,"used":false,"value":"returned","parameters":{"name":"sn_doc_approval_document_approval"}},{"image":"","reference":false,"rawLabel":"Approved","selected":false,"label":"Approved","missing":false,"used":false,"value":"approved","parameters":{"name":"sn_doc_approval_document_approval"}},{"image":"","reference":false,"rawLabel":"Rejected","selected":false,"label":"Rejected","missing":false,"used":false,"value":"rejected","parameters":{"name":"sn_doc_approval_document_approval"}}]},{"name":"subflow.document_id","label":"Input➛Document Id","type":"string","base_type":"string","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"d6126c60-e5a3-48c1-a151-305327285308"}},{"name":"1bccda56-a014-4626-a57f-eb51cec42306.Record","label":"1 - Look Up Record➛Document Approval Record","reference":"sn_doc_approval_document_approval","reference_display":"Document Approval","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"1bccda56-a014-4626-a57f-eb51cec42306.Record.sys_id","label":"1 - Look Up Record➛Document Approval Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_doc_approval_document_approval","column_name":"sys_id"},{"name":"1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.manager","label":"1 - Look Up Record➛Document Approval Record➛Submitter➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager"},{"name":"1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.name","label":"1 - Look Up Record➛Document Approval Record➛Submitter➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name"},{"name":"1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.email","label":"1 - Look Up Record➛Document Approval Record➛Submitter➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"8c318f1d-b260-48a9-89a8-fa06592d6975.record.approver.name","label":"2 - Create or Update Record➛Document Approver Record➛Approver➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name"},{"name":"8c318f1d-b260-48a9-89a8-fa06592d6975.record.sys_id","label":"2 - Create or Update Record➛Document Approver Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_doc_approval_document_approver","column_name":"sys_id"},{"name":"8c318f1d-b260-48a9-89a8-fa06592d6975.record","label":"2 - Create or Update Record➛Document Approver Record","reference":"sn_doc_approval_document_approver","reference_display":"Document Approver","type":"reference","base_type":"reference","attributes":{"uiType":"document_id","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"8c318f1d-b260-48a9-89a8-fa06592d6975.record.state","label":"2 - Create or Update Record➛Document Approver Record➛State","reference":"","reference_display":"State","type":"choice","base_type":"choice","parent_table_name":"sn_doc_approval_document_approver","column_name":"state","choices":[{"label":"-- None --","image":"","reference":false,"rawLabel":"-- None --","selected":false,"missing":false,"used":false,"value":""},{"image":"","reference":false,"rawLabel":"Submitted","selected":false,"label":"Submitted","missing":false,"used":false,"value":"submitted","parameters":{"name":"sn_doc_approval_document_approver"}},{"image":"","reference":false,"rawLabel":"Returned","selected":false,"label":"Returned","missing":false,"used":false,"value":"returned","parameters":{"name":"sn_doc_approval_document_approver"}},{"image":"","reference":false,"rawLabel":"Approved","selected":false,"label":"Approved","missing":false,"used":false,"value":"approved","parameters":{"name":"sn_doc_approval_document_approver"}},{"image":"","reference":false,"rawLabel":"No Longer Required","selected":false,"label":"No Longer Required","missing":false,"used":false,"value":"not_required","parameters":{"name":"sn_doc_approval_document_approver"}},{"image":"","reference":false,"rawLabel":"Rejected","selected":false,"label":"Rejected","missing":false,"used":false,"value":"rejected","parameters":{"name":"sn_doc_approval_document_approver"}}]}]</label_cache>
+        <master>true</master>
+        <name>Single Stage Approval</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Single Stage Approval">0029657963b331103ce103213b96c46b</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4c29657968b33110a10a7deee5b7a36a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Demo App using template" source="x_1298510_demo_a_0">2f19257971b33110021a2b5beceb4fa9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=4c29657968b33110a10a7deee5b7a36a"/>
+    <sys_variable_value action="delete_multiple" query="document_key=4c29657968b33110a10a7deee5b7a36a"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=4c29657968b33110a10a7deee5b7a36a"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=4c29657968b33110a10a7deee5b7a36a"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=4c29657968b33110a10a7deee5b7a36a^sys_idNOT IN8829657973b331101759b87af350c458"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>4c29657968b33110a10a7deee5b7a36a</id>
+        <name>Single Stage Approval</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>8829657973b331101759b87af350c458</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=8829657973b331101759b87af350c458"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=4c29657968b33110a10a7deee5b7a36a^sys_idNOT IN00296579c4b33110512ca9627370bb59"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=d6126c60-e5a3-48c1-a151-305327285308</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>document_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Document Id</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Single Stage Approval">4c29657968b33110a10a7deee5b7a36a</model>
+        <model_id>4c29657968b33110a10a7deee5b7a36a</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_4c29657968b33110a10a7deee5b7a36a</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>00296579c4b33110512ca9627370bb59</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Demo App using template" source="x_1298510_demo_a_0">2f19257971b33110021a2b5beceb4fa9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=00296579c4b33110512ca9627370bb59"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=4c29657968b33110a10a7deee5b7a36a"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4c29657968b33110a10a7deee5b7a36a"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=4c29657968b33110a10a7deee5b7a36a^sys_idNOT IN04296579c8b33110119046e109e89f49,0c29657926b331104191b044e66e1d50,402965792db3311090b7b496e01cc958,442965796bb331103845ee6dbc474b57,4829657946b33110b18ddafc857eef50,4c29657973b3311075102b2b0da68452,73192579d0b33110065ccad987e468ab,80296579bab33110bd481e85c6029b4e,c829657972b3311000ddc8508e756c54,cc2965790bb33110fc414f84dc3d6e50"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Wait For Condition">89ce8a4187120010663ca1bb36cb0be3</action_type>
+        <action_type_parent display_value="Wait For Condition">8bb9a8160b10030085c083eb37673aec</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">4c29657968b33110a10a7deee5b7a36a</flow>
+        <order>4</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>04296579c8b33110119046e109e89f49</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <ui_id>e0d3190d-f39b-4450-ac07-599a9b344b4f</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=04296579c8b33110119046e109e89f49"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>04296579c8b33110119046e109e89f49</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>88296579afb33110284df893f2cfeb49</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <value>x_1298510_demo_a_0_document_approver</value>
+        <variable display_value="Table">45ce8a4187120010663ca1bb36cb0bea</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>04296579c8b33110119046e109e89f49</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>8c296579adb33110a39b0703a4c1a048</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <value>state!=submitted</value>
+        <variable display_value="Conditions">49ce8a4187120010663ca1bb36cb0bef</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=04296579c8b33110119046e109e89f49"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>04296579c8b33110119046e109e89f49</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>402965795bb33110de4586eba196f449</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_89ce8a4187120010663ca1bb36cb0be3</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=04296579c8b33110119046e109e89f49"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=04296579c8b33110119046e109e89f49"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Event">40296579ccb3311007d6d9ae95d8d18e</action_type>
+        <action_type_parent display_value="Create Event">8c29657976b331102dd749a4f9a6208d</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">4c29657968b33110a10a7deee5b7a36a</flow>
+        <order>6</order>
+        <parent_ui_id>979a1b99-9196-4461-bf71-b0c57881ba29</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>0c29657926b331104191b044e66e1d50</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <ui_id>3d5b9d74-5170-4a8b-8888-764b03ee96eb</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=0c29657926b331104191b044e66e1d50"/>
+    <sys_element_mapping action="delete_multiple" query="id=0c29657926b331104191b044e66e1d50"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approver</field>
+        <id>0c29657926b331104191b044e66e1d50</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>882965792db33110318b490a52a1af4f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.approver.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approver_id</field>
+        <id>0c29657926b331104191b044e66e1d50</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>002965792cb3311085365c55b840b750</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>company</field>
+        <id>0c29657926b331104191b044e66e1d50</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>4c29657993b3311077b2a1b08823c14f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.company.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>document_name</field>
+        <id>0c29657926b331104191b044e66e1d50</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>c029657937b331103686c68ce4958450</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>document_owner</field>
+        <id>0c29657926b331104191b044e66e1d50</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>48296579bab33110a61b1c5db91c1e4d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>email_id</field>
+        <id>0c29657926b331104191b044e66e1d50</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>c029657903b331103b70730138a5674d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.email}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>status</field>
+        <id>0c29657926b331104191b044e66e1d50</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>8429657975b3311082787ff34369894d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.state}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>sysid</field>
+        <id>0c29657926b331104191b044e66e1d50</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>002965791bb331106598f52a461fe94d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=0c29657926b331104191b044e66e1d50^sys_idNOT IN0829657910b33110e9534e43907d8a4e,0c29657979b33110f86eabc2a856fd4d,44296579c2b331106aa3de70790c4b4e,4c2965790db33110040c3dcb5ba4e64c,8c2965796ab331107a2dd7140b5e674e,cc296579d0b331105952b83bd4cc454d"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>message</input_name>
+        <instance>0c29657926b331104191b044e66e1d50</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"message":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn \u0027Your document has been approved\u0027;"}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>0829657910b33110e9534e43907d8a4e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>reason_for_return</input_name>
+        <instance>0c29657926b331104191b044e66e1d50</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"reason_for_return":{"scriptActive":false,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\n"}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>0c29657979b33110f86eabc2a856fd4d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>email_id</input_name>
+        <instance>0c29657926b331104191b044e66e1d50</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"email_id":{"scriptActive":false}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>44296579c2b331106aa3de70790c4b4e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>company</input_name>
+        <instance>0c29657926b331104191b044e66e1d50</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"company":{"scriptActive":false}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>4c2965790db33110040c3dcb5ba4e64c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>status</input_name>
+        <instance>0c29657926b331104191b044e66e1d50</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"status":{"scriptActive":false}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>8c2965796ab331107a2dd7140b5e674e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>reason</input_name>
+        <instance>0c29657926b331104191b044e66e1d50</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"reason":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn fd_data._2__create_record.record.comments.getJournalEntry(-1);"}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>cc296579d0b331105952b83bd4cc454d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=0c29657926b331104191b044e66e1d50"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">4c29657968b33110a10a7deee5b7a36a</flow>
+        <order>7</order>
+        <parent_ui_id>979a1b99-9196-4461-bf71-b0c57881ba29</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>402965792db3311090b7b496e01cc958</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <ui_id>6540a418-193f-4bc9-a76e-070450969598</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=402965792db3311090b7b496e01cc958"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>402965792db3311090b7b496e01cc958</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>8c296579aeb33110e099fb93e6143557</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <value>status=approved^work_notes=fd-scripted</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>402965792db3311090b7b496e01cc958</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>c829657981b331106bebc6ae36071357</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <value>x_1298510_demo_a_0_document_approval</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=402965792db3311090b7b496e01cc958"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>402965792db3311090b7b496e01cc958</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>482965796cb331108f0a6f6328d42356</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=402965792db3311090b7b496e01cc958^sys_idNOT INf719257960b33110dd210d65220361ab"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>values</input_name>
+        <instance>402965792db3311090b7b496e01cc958</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"work_notes":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value. \n**Order number is offset by +1 in Error Handling Section.\n**Available options display upon pressing \".\" after fd_data\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn fd_data._2__create_or_update_record.record.comments;","savedValue":""}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>f719257960b33110dd210d65220361ab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=402965792db3311090b7b496e01cc958"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Event">40296579ccb3311007d6d9ae95d8d18e</action_type>
+        <action_type_parent display_value="Create Event">8c29657976b331102dd749a4f9a6208d</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">4c29657968b33110a10a7deee5b7a36a</flow>
+        <order>14</order>
+        <parent_ui_id>d762098d-f596-47bf-9c52-e515e42ac0f9</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>442965796bb331103845ee6dbc474b57</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <ui_id>a51433bb-c88e-40db-a399-609d25fb9332</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=442965796bb331103845ee6dbc474b57"/>
+    <sys_element_mapping action="delete_multiple" query="id=442965796bb331103845ee6dbc474b57"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approver</field>
+        <id>442965796bb331103845ee6dbc474b57</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>0c2965792db331108fdc181cb34ee856</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.approver.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approver_id</field>
+        <id>442965796bb331103845ee6dbc474b57</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>8029657961b33110ca60ecb4c4a3ff57</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>company</field>
+        <id>442965796bb331103845ee6dbc474b57</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>c029657961b33110e708a891f3ae3256</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.company.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>document_name</field>
+        <id>442965796bb331103845ee6dbc474b57</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>84296579f4b331102c6e0f60638c8256</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>document_owner</field>
+        <id>442965796bb331103845ee6dbc474b57</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>cc296579c7b33110f734af9ae5a11c56</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>email_id</field>
+        <id>442965796bb331103845ee6dbc474b57</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>442965799ab331106eecd93b122fc854</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.email}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>status</field>
+        <id>442965796bb331103845ee6dbc474b57</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>8029657901b3311088669f604e66b054</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.state}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>sysid</field>
+        <id>442965796bb331103845ee6dbc474b57</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>08296579edb331104bfc01da3976a154</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=442965796bb331103845ee6dbc474b57^sys_idNOT IN0029657967b331108bd12e5e14e49856,8c29657909b331108341d4137cf86554"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>message</input_name>
+        <instance>442965796bb331103845ee6dbc474b57</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"message":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn \u0027Your document has been rejected\u0027;"}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>0029657967b331108bd12e5e14e49856</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>reason</input_name>
+        <instance>442965796bb331103845ee6dbc474b57</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"reason":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn fd_data._2__create_record.record.comments.getJournalEntry(-1);"}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>8c29657909b331108341d4137cf86554</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=442965796bb331103845ee6dbc474b57"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">4c29657968b33110a10a7deee5b7a36a</flow>
+        <order>15</order>
+        <parent_ui_id>d762098d-f596-47bf-9c52-e515e42ac0f9</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>4829657946b33110b18ddafc857eef50</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <ui_id>0922a0db-ef1d-4937-b567-1bccf564b2ac</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=4829657946b33110b18ddafc857eef50"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>4829657946b33110b18ddafc857eef50</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>0829657943b331105ce614b5fa7f2551</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <value>status=rejected^work_notes=fd-scripted</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>4829657946b33110b18ddafc857eef50</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>442965792ab331102f6ac949ab992e51</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <value>x_1298510_demo_a_0_document_approval</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=4829657946b33110b18ddafc857eef50"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>4829657946b33110b18ddafc857eef50</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>84296579fcb331108a0efe02a554c650</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=4829657946b33110b18ddafc857eef50^sys_idNOT INfb192579adb33110b90b619e01178caa"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>values</input_name>
+        <instance>4829657946b33110b18ddafc857eef50</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"work_notes":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value. \n**Order number is offset by +1 in Error Handling Section.\n**Available options display upon pressing \".\" after fd_data\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn fd_data._2__create_or_update_record.record.comments;","savedValue":""}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>fb192579adb33110b90b619e01178caa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4829657946b33110b18ddafc857eef50"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">4c29657968b33110a10a7deee5b7a36a</flow>
+        <order>11</order>
+        <parent_ui_id>c8ebe44c-3487-4d00-9067-3ff0859af400</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>4c29657973b3311075102b2b0da68452</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <ui_id>b0b653c2-0eff-43b2-bd40-2b43f54da2c7</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=4c29657973b3311075102b2b0da68452"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>4c29657973b3311075102b2b0da68452</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>8c29657950b33110b6d9d844feac7b51</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <value>status=returned^work_notes=fd-scripted</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>4c29657973b3311075102b2b0da68452</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>cc2965796ab331103731f6a45cb45b53</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <value>x_1298510_demo_a_0_document_approval</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=4c29657973b3311075102b2b0da68452"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>4c29657973b3311075102b2b0da68452</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>c0296579b8b33110cff2330dde697d53</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=4c29657973b3311075102b2b0da68452^sys_idNOT IN3b1925795bb33110d65b1116e57ee5aa"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>values</input_name>
+        <instance>4c29657973b3311075102b2b0da68452</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"work_notes":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value. \n**Order number is offset by +1 in Error Handling Section.\n**Available options display upon pressing \".\" after fd_data\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn fd_data._2__create_or_update_record.record.comments;","savedValue":""}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>3b1925795bb33110d65b1116e57ee5aa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4c29657973b3311075102b2b0da68452"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create or Update Record">ab575ae253b3230034c6ddeeff7b12f1</action_type>
+        <action_type_parent display_value="Create or Update Record">e057d2e253b3230034c6ddeeff7b1261</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">4c29657968b33110a10a7deee5b7a36a</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>73192579d0b33110065ccad987e468ab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <ui_id>8c318f1d-b260-48a9-89a8-fa06592d6975</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=73192579d0b33110065ccad987e468ab"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>73192579d0b33110065ccad987e468ab</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>bf1925798ab33110360878ff1645fdaa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <value>x_1298510_demo_a_0_document_approver</value>
+        <variable display_value="Table Name">27575ae253b3230034c6ddeeff7b12f4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=73192579d0b33110065ccad987e468ab"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>fields</field>
+        <id>73192579d0b33110065ccad987e468ab</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>37192579fbb3311029bc4d0fac9a45ab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_ab575ae253b3230034c6ddeeff7b12f1</table>
+        <value>document={{1bccda56-a014-4626-a57f-eb51cec42306.Record.sys_id}}^approver={{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.manager}}^state=submitted^coalesce_fields=document</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=73192579d0b33110065ccad987e468ab"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=73192579d0b33110065ccad987e468ab"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Event">40296579ccb3311007d6d9ae95d8d18e</action_type>
+        <action_type_parent display_value="Create Event">8c29657976b331102dd749a4f9a6208d</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">4c29657968b33110a10a7deee5b7a36a</flow>
+        <order>10</order>
+        <parent_ui_id>c8ebe44c-3487-4d00-9067-3ff0859af400</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>80296579bab33110bd481e85c6029b4e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <ui_id>ced8cff1-e8ac-493c-bcc1-3a2cc25c0a0e</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=80296579bab33110bd481e85c6029b4e"/>
+    <sys_element_mapping action="delete_multiple" query="id=80296579bab33110bd481e85c6029b4e"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approver</field>
+        <id>80296579bab33110bd481e85c6029b4e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>c8296579b9b33110e454089731de724e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.approver.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approver_id</field>
+        <id>80296579bab33110bd481e85c6029b4e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>402965795cb33110d782d178b348014f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>company</field>
+        <id>80296579bab33110bd481e85c6029b4e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>042965799bb3311090c45af92b66524f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.company.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>document_name</field>
+        <id>80296579bab33110bd481e85c6029b4e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>4429657908b33110408ee8b91e63504b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>document_owner</field>
+        <id>80296579bab33110bd481e85c6029b4e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>802965799eb3311035f7e9b826d4b54b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>email_id</field>
+        <id>80296579bab33110bd481e85c6029b4e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>cc296579e0b331104c322389f39fff4a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.email}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>status</field>
+        <id>80296579bab33110bd481e85c6029b4e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>08296579bab3311004247f781119b14b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.state}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>sysid</field>
+        <id>80296579bab33110bd481e85c6029b4e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>8c2965793cb33110ce15e16f37f3294b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=80296579bab33110bd481e85c6029b4e^sys_idNOT IN042965798db3311086cac05b65b21c4c,0c296579e3b33110451aa524191e984a,882965794bb33110606f9f3522cbde4c"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>message</input_name>
+        <instance>80296579bab33110bd481e85c6029b4e</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"message":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\nreturn \u0027Your document has been returned\u0027;"}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>042965798db3311086cac05b65b21c4c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>reason</input_name>
+        <instance>80296579bab33110bd481e85c6029b4e</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"reason":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn fd_data._2__create_record.record.comments.getJournalEntry(-1);"}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>0c296579e3b33110451aa524191e984a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>email_id</input_name>
+        <instance>80296579bab33110bd481e85c6029b4e</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"email_id":{"scriptActive":false}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>882965794bb33110606f9f3522cbde4c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=80296579bab33110bd481e85c6029b4e"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Event">40296579ccb3311007d6d9ae95d8d18e</action_type>
+        <action_type_parent display_value="Create Event">8c29657976b331102dd749a4f9a6208d</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">4c29657968b33110a10a7deee5b7a36a</flow>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>c829657972b3311000ddc8508e756c54</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <ui_id>a99d4700-da0c-4f8c-bce4-a29fc3b64677</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=c829657972b3311000ddc8508e756c54"/>
+    <sys_element_mapping action="delete_multiple" query="id=c829657972b3311000ddc8508e756c54"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approver</field>
+        <id>c829657972b3311000ddc8508e756c54</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>8829657927b331109c5ad58946819a55</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.approver.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approver_id</field>
+        <id>c829657972b3311000ddc8508e756c54</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>c429657953b33110c2ba257dd78f2355</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>company</field>
+        <id>c829657972b3311000ddc8508e756c54</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>4c29657909b33110fd3eb9527ffe0f55</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.company.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>document_name</field>
+        <id>c829657972b3311000ddc8508e756c54</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>40296579edb331101b48613ca9196c55</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>document_owner</field>
+        <id>c829657972b3311000ddc8508e756c54</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>04296579fdb3311042809a8332315c55</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>email_id</field>
+        <id>c829657972b3311000ddc8508e756c54</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>c4296579b0b33110418ff054ce366052</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.manager.email}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>status</field>
+        <id>c829657972b3311000ddc8508e756c54</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>042965798db331102f9cf2099b1c5252</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.status}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>sysid</field>
+        <id>c829657972b3311000ddc8508e756c54</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>882965796db331109ac7061529ee2e52</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40296579ccb3311007d6d9ae95d8d18e</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=c829657972b3311000ddc8508e756c54^sys_idNOT IN0029657967b33110324fb9bd4bd43753,0c29657984b331102ea1e4a362f72653,40296579c5b33110384f1bd965a5de52,4829657964b331105f1f96f192ea9153"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>document_name</input_name>
+        <instance>c829657972b3311000ddc8508e756c54</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"document_name":{"scriptActive":false}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>0029657967b33110324fb9bd4bd43753</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>email_id</input_name>
+        <instance>c829657972b3311000ddc8508e756c54</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"email_id":{"scriptActive":false}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>0c29657984b331102ea1e4a362f72653</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>message</input_name>
+        <instance>c829657972b3311000ddc8508e756c54</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"message":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn \u0027You have a document to review\u0027;"}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>40296579c5b33110384f1bd965a5de52</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>document_owner</input_name>
+        <instance>c829657972b3311000ddc8508e756c54</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"document_owner":{"scriptActive":false}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>4829657964b331105f1f96f192ea9153</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=c829657972b3311000ddc8508e756c54"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">4c29657968b33110a10a7deee5b7a36a</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>cc2965790bb33110fc414f84dc3d6e50</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <ui_id>1bccda56-a014-4626-a57f-eb51cec42306</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=cc2965790bb33110fc414f84dc3d6e50"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>cc2965790bb33110fc414f84dc3d6e50</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>c42965799fb331105656dd713252614f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <value>x_1298510_demo_a_0_document_approval</value>
+        <variable display_value="Table">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=cc2965790bb33110fc414f84dc3d6e50"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>cc2965790bb33110fc414f84dc3d6e50</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>c829657978b331102351d3bde1648151</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value>sys_id={{subflow.document_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=cc2965790bb33110fc414f84dc3d6e50"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=cc2965790bb33110fc414f84dc3d6e50"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=4c29657968b33110a10a7deee5b7a36a"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=4c29657968b33110a10a7deee5b7a36a^sys_idNOT IN002965799ab33110c148b6f008a80e4a,0c296579c9b331101676ae2d24151d47,48296579edb33110285be5b1b317d947,4c29657987b331102bd1dd55d0e6c349,842965791ab331102b6c1bd75041224a,c029657944b33110cebe395bfcb8064a"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">3f19257951b33110d93cda3350fc2fac</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Single Stage Approval">4c29657968b33110a10a7deee5b7a36a</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>002965799ab33110c148b6f008a80e4a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <ui_id>979a1b99-9196-4461-bf71-b0c57881ba29</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=002965799ab33110c148b6f008a80e4a"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>002965799ab33110c148b6f008a80e4a</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>08296579a8b33110ba2bc72abd46ca48</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <value>Approved</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=002965799ab33110c148b6f008a80e4a"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>002965799ab33110c148b6f008a80e4a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>84296579d0b3311044d3c18ae2209047</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.state}}=approved</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=002965799ab33110c148b6f008a80e4a"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=002965799ab33110c148b6f008a80e4a"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">bb192579afb33110b87637a6f7e864ab</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Single Stage Approval">4c29657968b33110a10a7deee5b7a36a</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>12</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>c8ebe44c-3487-4d00-9067-3ff0859af400</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>0c296579c9b331101676ae2d24151d47</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <ui_id>3d266c9b-fd12-4b9e-af17-c24120616c5f</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=0c296579c9b331101676ae2d24151d47"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=0c296579c9b331101676ae2d24151d47"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=0c296579c9b331101676ae2d24151d47"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">7f192579cfb331106ca8810276d5b9ab</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Single Stage Approval">4c29657968b33110a10a7deee5b7a36a</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>9</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>48296579edb33110285be5b1b317d947</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <ui_id>c8ebe44c-3487-4d00-9067-3ff0859af400</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=48296579edb33110285be5b1b317d947"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>48296579edb33110285be5b1b317d947</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>44296579a1b33110a0d008ddfdfb1d48</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <value>Returned</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=48296579edb33110285be5b1b317d947"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>48296579edb33110285be5b1b317d947</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>c829657983b3311004507b744226d748</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.state}}=returned</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=48296579edb33110285be5b1b317d947"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=48296579edb33110285be5b1b317d947"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">b719257963b33110f5346cde2fed0fac</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Single Stage Approval">4c29657968b33110a10a7deee5b7a36a</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>16</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>d762098d-f596-47bf-9c52-e515e42ac0f9</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>4c29657987b331102bd1dd55d0e6c349</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <ui_id>d683e08e-e237-4968-9076-bdac84bfc528</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=4c29657987b331102bd1dd55d0e6c349"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=4c29657987b331102bd1dd55d0e6c349"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=4c29657987b331102bd1dd55d0e6c349"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">f31925794cb33110a0dee5d1cfa1b7ac</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Single Stage Approval">4c29657968b33110a10a7deee5b7a36a</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>13</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>842965791ab331102b6c1bd75041224a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <ui_id>d762098d-f596-47bf-9c52-e515e42ac0f9</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=842965791ab331102b6c1bd75041224a"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>842965791ab331102b6c1bd75041224a</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>c4296579c8b331103491ca420be0de49</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <value>Rejected</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=842965791ab331102b6c1bd75041224a"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>842965791ab331102b6c1bd75041224a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>4829657965b331102ebd7afb0ae11c4a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.state}}=rejected</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=842965791ab331102b6c1bd75041224a"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=842965791ab331102b6c1bd75041224a"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">33192579feb33110f1b6b12f092f87ac</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Single Stage Approval">4c29657968b33110a10a7deee5b7a36a</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>8</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>979a1b99-9196-4461-bf71-b0c57881ba29</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>c029657944b33110cebe395bfcb8064a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <ui_id>423ea012-c51a-42bb-b340-023487961b5d</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=c029657944b33110cebe395bfcb8064a"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=c029657944b33110cebe395bfcb8064a"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=c029657944b33110cebe395bfcb8064a"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=4c29657968b33110a10a7deee5b7a36a"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=4c29657968b33110a10a7deee5b7a36a"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_4c29657968b33110a10a7deee5b7a36a^sys_idNOT IN80296579bab33110359ed87d8346bd48"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>document_id</element>
+        <help/>
+        <hint/>
+        <label>Document Id</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_4c29657968b33110a10a7deee5b7a36a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_id>80296579bab33110359ed87d8346bd48</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Document Id</sys_name>
+        <sys_package display_value="Demo App using template" source="x_1298510_demo_a_0">2f19257971b33110021a2b5beceb4fa9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_4c29657968b33110a10a7deee5b7a36a_document_id_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_4c29657968b33110a10a7deee5b7a36a"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_4c29657968b33110a10a7deee5b7a36a"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_4c29657968b33110a10a7deee5b7a36a"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>0029657963b331103ce103213b96c46b</sys_id>
+        <latest_snapshot>4c29657968b33110a10a7deee5b7a36a</latest_snapshot>
+        <compiler_build/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=0029657963b331103ce103213b96c46b"/>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=0029657963b331103ce103213b96c46b^sys_idNOT INcc29657960b33110c5debe403c049e47"/>
+    <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
+        <plan>com.snc.process_flow.engine.ProcessPlan@69873caa</plan>
+        <plan_id display_value="Single Stage Approval">0029657963b331103ce103213b96c46b</plan_id>
+        <snapshot>a690321ec7202010697d36d827c2601e</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:01</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>cc29657960b33110c5debe403c049e47</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:01</sys_updated_on>
+    </sys_flow_subflow_plan>
+</record_update>

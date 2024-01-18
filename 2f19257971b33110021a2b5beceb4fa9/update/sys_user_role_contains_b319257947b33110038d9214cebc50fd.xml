@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains">
+    <sys_user_role_contains action="INSERT_OR_UPDATE">
+        <contains display_value="x_1298510_demo_a_0.approver" name="x_1298510_demo_a_0.approver">50296579eeb3311034cb5ff36c99bccf</contains>
+        <role display_value="x_1298510_demo_a_0.admin" name="x_1298510_demo_a_0.admin">1829657917b3311020a9fba13fad3ace</role>
+        <sys_class_name>sys_user_role_contains</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:20:49</sys_created_on>
+        <sys_id>b319257947b33110038d9214cebc50fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Demo App using template" source="x_1298510_demo_a_0">2f19257971b33110021a2b5beceb4fa9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_update_name>sys_user_role_contains_b319257947b33110038d9214cebc50fd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:20:49</sys_updated_on>
+    </sys_user_role_contains>
+</record_update>

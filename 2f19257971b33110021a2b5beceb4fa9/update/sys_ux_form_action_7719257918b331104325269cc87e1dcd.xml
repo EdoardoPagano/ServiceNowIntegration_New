@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_form_action">
+    <sys_ux_form_action action="INSERT_OR_UPDATE">
+        <action_type>ui_action</action_type>
+        <active>true</active>
+        <declarative_action/>
+        <description/>
+        <name>EDIT</name>
+        <specificity>10</specificity>
+        <sys_class_name>sys_ux_form_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:21:03</sys_created_on>
+        <sys_id>7719257918b331104325269cc87e1dcd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>EDIT</sys_name>
+        <sys_package display_value="Demo App using template" source="x_1298510_demo_a_0">2f19257971b33110021a2b5beceb4fa9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_update_name>sys_ux_form_action_7719257918b331104325269cc87e1dcd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:21:03</sys_updated_on>
+        <table>x_1298510_demo_a_0_document_approval</table>
+        <ui_action display_value="">65fbe14d73052010116b42d785f6a7af</ui_action>
+    </sys_ux_form_action>
+</record_update>

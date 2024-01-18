@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_ui_rule_action">
+    <sys_sg_ui_rule_action action="INSERT_OR_UPDATE">
+        <operation display_value="Set UI Style">1fc6ba105b431010da168d8fa881c7bb</operation>
+        <order/>
+        <sys_class_name>sys_sg_ui_rule_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-18 12:20:47</sys_created_on>
+        <sys_id>002965797bb331101481fea92c087b14</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Demo App using template" source="x_1298510_demo_a_0">2f19257971b33110021a2b5beceb4fa9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Demo App using template">2f19257971b33110021a2b5beceb4fa9</sys_scope>
+        <sys_update_name>sys_sg_ui_rule_action_002965797bb331101481fea92c087b14</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-18 12:20:47</sys_updated_on>
+        <target>viewgroup_01</target>
+        <ui_rule display_value="Returned state rules for document approvals - List View Config">8029657911b3311022cfa53fbb1a2a15</ui_rule>
+        <value>{"BackgroundColor":"#FCD9B3"}</value>
+    </sys_sg_ui_rule_action>
+</record_update>
